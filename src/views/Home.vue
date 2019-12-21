@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <arm msg="Arm" :percentage="percentage"/>
+    <input type="range" min="0" max="100" step="0.1" v-model="percentage" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import arm from '@/components/arm.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    arm
+  },
+  data(){
+    return {
+      percentage: 100
+    }
   }
 }
 </script>
+
+<style lang="scss">
+
+</style>
