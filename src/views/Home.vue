@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <arm msg="Arm" :percentage="percentage"/>
+    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+      <arm :percentage="percentage"/>
+      <heart :percentage="percentage" />
+    </div>
     <input type="range" min="0" max="100" step="0.1" v-model="percentage" />
   </div>
 </template>
@@ -8,11 +11,12 @@
 <script>
 // @ is an alias to /src
 import arm from '@/components/arm.vue'
+import heart from '@/components/heart.vue'
 
 export default {
   name: 'home',
   components: {
-    arm
+    arm, heart
   },
   data(){
     return {

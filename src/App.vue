@@ -12,4 +12,7 @@
   text-align: center;
   color: #2c3e50;
 }
+body{
+  background-color: rgb(190, 190, 200);
+}
 </style>
